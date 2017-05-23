@@ -1,98 +1,92 @@
-<style type="text/css">
-.image-right {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  float: right;
-}
+## What's the deal with this app?
 
-.image-left {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  float: left;
-}
-</style>
+The main focus of this application is to address **development strategies** related to native development on Android, such as important concepts such as **engagement**, **user experience** and good practices adopted in the **life cycle** developing an application with **quality** and **maturity**.
 
-## Qual é a desse app?
-
-O foco principal desse aplicativo é abordar **estratégias de desenvolvimento** essenciais relacionadas ao desenvolvimento nativo em Android, assim como conceitos importantes como **engajamento**, **experiência de usuário** e boas práticas a serem adotados no **ciclo de vida** do desenvolvimento de um app com **qualidade** e **maturidade**.
-
-&nbsp;
-
-## Experiência do Usuário
+## User Experience
 
 
-A **UX** (Experiência do Usuário) é um conceito que aborda como o usuário se sente em cada interação com a solução, é algo que vai muito além de construção de belas interfaces. Para ter uma boa UX é preciso (no mínimo) preocupar-se com elementos de usabilidade, facilidade na interação com os componentes, tempo de resposta e feedback para as ações realizadas pelo usuário, ter assertividade quanto as funcionalidades importantes para a aplicação, conhecer os perfis de usuários e compreender a identidade visual e sensações ao qual o usuário está acostumado em seu ambiente - por exemplo, usuários mobile Android têm experências/sensações semelhantes mesmo navegando entre diferentes aplicativos de seus dispositivos, pois os aplicativos tendem a seguir a UX do Material Design, **lançada pela Google** no Google I/O 2014.
+**UX** (User Experience) is a concept about how the user feels in each interaction with the solution, it goes beyond the building of beautiful interfaces. To have a good UX it is necessary (at least) to be concerned with elements of usability, components interactions, response time and feedback for the actions performed by the user, be assertive about the major application features, know the user profiles and understand the visual identity and sensations that the user is used to in their environment, e.g., Android mobile users have similar experiences and sensations even while navigating between different apps on their devices, because the applications tend to follow the Material UX Design, **launched by Google** at Google I/O 2014.
 
 ### Material Design
 
-Esse aplicativo segue os conceitos de UX do *Material Design*, que a grosso modo é um conceito baseado em camadas de folhas de papel, com cores "chapadas" e transições com efeitos elegantes mais próximos da realidade. Muito eficiente em dispositivos mobile, mas desenvolvido também para se adaptar em resoluções variadas como em tablet´s e desktop´s.
+This application follows the UX concepts of *Material Design* which roughly speaking is a concept based on layers of paper sheets with "flat" colors and transitions with elegant effects closer to reality. Very efficient on mobile devices, also developed to adapt to different resolutions such as tablets and desktops.
 
-O Material Design foi lançado inicialmente para a versão Lollipop (e posteriores), mas atualmente já é possível utilizar bibliotecas que dão suporte ao Material mesmo para versões bem mais antigas.
-> Para saber um pouco mais sobre como trabalhar com o Material em dispositivos pré-Lollipop, acesse: [Android Material Design para dispositivos Pré-Lollipop](https://goo.gl/Ubb09l){:target="_blank"}
+Material Design was initially launched for the Lollipop version (and later), but it is now possible to use libraries that support the Material even for much older versions.
+> To learn more about working with Material on pre-Lollipop devices, visit: [Android Material Design for Pre-Lollipop devices](https://goo.gl/Ubb09l)
 
-[![Firebase Analytics](./analytics_lockups_horz_light.png)](https://firebase.google.com/features/analytics/){:target="_blank"}
+[![Firebase Analytics](./analytics_lockups_horz_light.png)](https://firebase.google.com/features/analytics/)
 
-UX é um processo de melhoria contínua, é preciso criar as [Personas](https://brasil.uxdesign.cc/por-que-criar-personas-bc796a1ffc7e){:target="_blank"} do seu aplicativo e **entender como seus usuários interagem com ele**. Para ajudar, de maneira bem prática e ágil nesse processo evolutivo, o firebase fornece uma ferramente de análise, que possibilita termos um **Mapa de Calor** de todo o nosso aplicativo, capturando as ações do usuário automaticamente, nos ajudando a identificar quais as ações/conteúdos mais relevantes para ele, o que já pode ser um "gancho" também para trabalhar a **Retenção** dos usuários no seu aplicativo. 
-> No contexto desse app, por ex., quando um usuário adicionar algum filme da Marvel aos seus favoritos, ele passa a ser "categorizado" como fã de filmes da Marvel e ser notificado quando um trailer de qualquer filme novo da Marvel for lançado e abrir novamente o aplicativo (que pode não ter sido acessado pelo usuário há algum tempo).
+UX is a process of continuous improvement, you need to create the [Personas](https://brasil.uxdesign.cc/por-que-criar-personas-bc796a1ffc7e) of your application, plus **understand how your users interact with it**. To help us in a practical and agile way through this evolutionary process, firebase provides an analysis tool, which allows us to have a **Heat Map** of our entire application, capturing the user's actions automatically, helping us to identify which ones are the most relevant actions/content to him, which can already be a "hook" also to work the **Retention** of users in your application.
+> In the context of this app, for example, when a user adds a Marvel movie at their favorites, they become "categorized" as a Marvel movie fan and be notified when a trailer for any new Marvel movie is released and reopen the application (which may not have been accessed by the user in a while).
 
-&nbsp;
+## Marketing
 
-## Mercado
+As the _Jelly Bean_ version still has a large share of the [market](https://developer.android.com/about/dashboards/index.html) the goal was to ensure that even users with this version of Android have the same experience as users with newer versions, which required extra development effort.
 
-Como a versão _Jelly Bean_ ainda possui uma fatia grande do [mercado](https://developer.android.com/about/dashboards/index.html){:target="_blank"} o objetivo foi fazer com que, mesmo os usuários com essa versão do Android tenham a mesma experiência que usuários com versões mais recentes, o que exigiu um esforço extra no desenvolvimento.
+Another important factor to be considered in the development of applications is the **distribution**, in Android, the effort to have translations in different languages is minimal which makes it possible, in an easy way to distribute applications globally.
 
-Outro fator importante a ser considerado no desenvolvimento de aplicativos é a **distribuição**, no Android o esforço para ter traduções em diferentes linguagens é mínima, o que possibilita, de maneira fácil, a distruição de aplicativos de forma globalizada.
+> For this application, two languages are being used, _English_ as the "default" option and _Portuguese_.
 
-> Para esse aplicativo, duas linguagens estão sendo utilizadas, _inglês_ como opção "default" e _português_
+ 
+<img align="left" src=./proguard-snippets.png>In addition to preventing malicious users does reverse engineering in your code and have **access to sensitive data from your solution**, [Proguard](http://www.thiengo.com.br/proguard-android) also removes all unused code and other resources such as images, plus unused codes from third party libraries referenced in your app. Therefore, you have an application where no _hacker_ will have access to your information and will have an extremely light installation _apk_ file with **up to 70% of download size reduction** - _the case with this app_, what will avoid that old "I'll download it at home, on WiFi".
+> For a starting point in the _Proguard_ study, two excellent videos from the _Android Performance Patterns_ channel helps a lot, one about [removing unused codes](https://www.youtube.com/watch?v=5frxLkO4oTM&index=17&list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE) and the other on how to [remove unused resources](https://www.youtube.com/watch?v=HxeW6DHEDQU&index=18&list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE).
 
-&nbsp;
 
-[![Proguard](./proguard-snippets.png)](http://www.thiengo.com.br/proguard-android){: .image-right target="_blank"} Além de evitar que usuários maliciosos façam engenharia reversa do seu código e tenham **acesso à dados sigilosos da sua solução**, o _Proguard_ também remove todo código e outros recursos (como imagens, por ex.) não-utilizados (inclusive das bibliotecas de terceiros referenciadas no seu app). Como resultado final, você tem um aplicativo onde nenhum _hacker_ terá acesso as suas informações e terá uma arquivo de instalação (apk) extremamente leve, com **redução de até 70%** (foi o caso desse app) no tamanho final que o usuário terá que fazer o download, o que vai evitar aquele velho papo de _"Eu baixo lá em casa, no WiFi"_.
-> Para um ponto de partida no estudo do _Proguard_, dois excelentes vídeos do canal _Android Performance Patterns_ ajudam muito, um sobre [remover códigos não-utilizados](https://www.youtube.com/watch?v=5frxLkO4oTM&index=17&list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE){:target="_blank"} e o outro sobre como [remover recursos não utilizados](https://www.youtube.com/watch?v=HxeW6DHEDQU&index=18&list=PLWz5rJ2EKKc9CBxr3BVjPTPoDPLdPIFCE){:target="_blank"}.
+## Ensuring application quality
 
-&nbsp;
+Testing routines and error catching should be part of the daily-basis in the development cycle of an Android application, mainly due to the wide variety of devices available on the market, and to help with testing, some concepts/tools are widely used by experienced development teams:
 
-## Garantindo a qualidade do aplicativo
+- [**Crash Reporting**](https://www.youtube.com/watch?v=B7mlLVAkcfU) - Service/tool that captures untreated application errors and displays device details when the error has occurred, such as available memory, connection type, device model and so on.
 
-Rotinas de testes e captura de erros devem ser elementos essenciais no ciclo de vida do desenvolvimento de um aplicativo Android, principalmente devido à grande variedade de aparelhos disponíveis no mercado, e para ajudar nos testes, alguns conceitos/ferramentas são bastante usados por times de desenvolvimento experientes:
+- [**Automated Test Lab**](https://www.youtube.com/watch?v=4_ZEEX1x17k) - Service normally offered in the "cloud" that runs automated tests (created by the developer), plus automated tests - where crazy clicks are made on your app, using physical devices of different models.
 
-- [**Crash Reporting**](https://www.youtube.com/watch?v=B7mlLVAkcfU){:target="_blank"} - Serviço/ferramenta que capture os erros não tratados do aplicativo e exiba os detalhes do aparelho quando o erro ocorreu, como memória disponível, tipo de conexão, modelo do dispositivo...
-> 
-- [**Test Lab Automatizados**](https://www.youtube.com/watch?v=4_ZEEX1x17k){:target="_blank"} - Serviço normalmente oferecido na "nuvem" que roda testes automatizados (criados pelo desenvolvedor) e/ou também testes "robôs" - onde são feitos cliques alucinados no seu aplicativo, usando dispositivos físicos de diversos modelos.
+- [**Remote access testing**](https://www.browserstack.com/) - Service also offered in the "cloud" where it is possible to choose between different types of physical devices and perform tests as if you have it in your hands.
 
-- [**Testes via acesso remoto**](https://www.browserstack.com/){:target="_blank"} - Serviço também oferecido na "nuvem" onde é possível escolher entre diversos tipos de dispositivos **físicos** e realizar testes como se estive com o aparelho em mãos.
+> Other important elements are the maintenance of the _Alfa_ and _Beta_ versions for approval before publishing the applications to the official store.
 
-> Outros elementos importantes são a manutenção das versões _Alfa_ e _Beta_ para homologação antes de publicar os aplicativos para a loja oficial.
+<img align="left" src=./aws-device-farm.png> To automated testing and remote access testing, Amazon Web Services offers a very powerful suite of solutions, [AWS Device Farm](https://aws.amazon.com/en/device-farm/), where you can test and interact with Android, iOS and web apps on multiple devices at the same time.
 
-&nbsp;
+> Since you only pay for use on AWS, _Device Farm_ becomes a very interesting option - compared to _browserstack_ $29/month, as automated tests are done in minutes, and are made via remote access, even that manual tests that do not take too long because their focus is to enable tests to **ensure that the app works as expected on devices that the developer(s) or tester(s) do not have**.
 
-[![AWS Device Farm](./aws-device-farm.png)](https://aws.amazon.com/pt/device-farm/){: .image-left target="_blank"} Para os testes automatizados e os testes por acesso remoto a Amazon Web Services oferece uma suíte muito poderosa de soluções, a [AWS Device Farm](https://aws.amazon.com/pt/device-farm/){:target="_blank"}, onde você consegue testar e interagir com aplicativos Android e iOS e aplicações web em vários dispositivos ao mesmo tempo. 
-> Como você só paga pelo uso na AWS, a _Device Farm_ se torna uma opção muito interessante - em comparação aos 29$/mês da _browserstack_, pois os testes automatizados são realizados em questões de minutos, e os feitos através de acesso remoto, mesmo que manuais, não demoram também, pois o foco deles é viabilizar testes para **garantir que o app funcione como se espera em dispositivos que o(s) desenvolvedor(es) ou tester(s) não possuem** quando realizaram sua bateria de testes após conclusão do desenvolvimento do app.
 
-&nbsp;
+## Strategies for a safe and optimized development
 
-## Estratégias para um desenvolvimento seguro e otimizado
+During app development, you need to be aware of **memory management** - how much RAM your app requires, when (and how) it allocates and frees memory, to avoid undue memory allocation, which can negatively impact the user experience, causing **slowness and "crashes"** - the annoying [ANRs](https://developer.android.com/training/articles/perf-anr.html) - those "sickening" messages "displayed by the Operating System if the app takes too long to respond to a user's action.
 
-Durante o desenvolvimento do app é preciso ficar atento quanto ao **gerencimento de memória** - quanto de memória RAM que seu app exige, quando (e como) ele aloca e libera memória, a fim de evitar alocação indevida de memória, o que pode impactar negativamente na experiência do usuário, causando **lentidão e "travamentos"** - as incômodas [ANRs](https://developer.android.com/training/articles/perf-anr.html){:target="_blank"} - aquelas mensagens "enjoativas" exibidas pelo Sistema Operacional caso o app demore para responder à uma ação do usuário.
+An app developed without a focus on doing good memory management may cause what in the development world we call of _Memory Leaks_, something that usually causes errors in the application, ending it abruptly and unexpectedly, and these errors may vary depending on the device and the User Operating System.
 
-Um app desenvolvido sem foco em fazer um bom gerenciamento de memória também por vir a causar o que no mundo do desenvolvimento chamamos de _Memory Leaks_ ( ou "Vazamentos de Memória), algo que geralmente provoca erros no aplicativo, encerrando-o abrupta e inesperadamente, e esses erros podem variar de acordo com o dispositivo e Sistema Operacional do Usuário.
+<img align="left" src=./android-dev-pattern.png>Some design patterns apply in the world of Android development to avoid undesirable _Memory Leaks_, mainly in the use of _Inner Classes_, _AsyncTaks_ and _Runnables_ related to visualization elements that need to be updated after an asynchronous operation where _Context_ is passed for this class family, there is a lot information on this subject, but a good start, mainly to **avoid errors in "runtime"** is to understand how to reference _Context_ through [WeakReferences](http://www.androiddesignpatterns.com/2013/01/inner- class-handler-memory-leak.html).
 
-[![Android Development Patters](./android-dev-pattern.png)](https://plus.google.com/collection/sLR0p){: .image-left target="_blank"}Alguns padrões de design se aplicam no mundo do desenvolvimento Android para evitar os _Memory Leaks_ indesejáveis, principalmente no uso de _Inner Classes_, _AsyncTaks_ e _Runnables_ relacionados a elementos de visualização que precisam ser atualizados após uma operação assíncrona onde se passa o _Context_ para essa família de classes, há muita informação acerca desse assunto, mas um bom começo, principalmente para **evitar erros em "runtime"** é entender como referenciar o _Context_ através de [WeakReferences](http://www.androiddesignpatterns.com/2013/01/inner-class-handler-memory-leak.html){:target="_blank"}.
+<img align="left" src=./leakcanary.png>
+ Even following the most diverse standards and best practices, the wide variety of Android devices it is **difficult for the developer to predict all scenarios** where a "memory leak" may occur and to assist *a lot* in this task it is recommended to use [LeakCanary](https://medium.com/square-corner-blog/leakcanary-detect-all-memory-leaks-875ff8360745) - a plugin that automatically detects _memory leaks_ in your development phase.
 
-&nbsp;
 
-[![LeakCanary](./leakcanary.png)](https://medium.com/square-corner-blog/leakcanary-detect-all-memory-leaks-875ff8360745){: .image-left target="_blank"} Mesmo seguindo os mais diversos padrões e boas práticas, com a grande variedade de dispositivos Android é **difícil para o desenvolvedor prever todos os cenários** onde possa ocorrer um "vazamento de memória" e para auxiliar *e muito* nessa tarefa é recomendável o uso do [LeakCanary](https://medium.com/square-corner-blog/leakcanary-detect-all-memory-leaks-875ff8360745){:target="_blank"} - plugin que detecta automaticamente os _memory leaks_ do seu aplicativo na fase de desenvolvimento.
+Another standard worth studying is the [Retained Fragments](http://www.androiddesignpatterns.com/2013/04/retaining-objects-across-config-changes.html), because in addition to helping to avoid _ANRs_, the UX improvement, in terms of response time, makes asynchronous data continue to be "loaded" even if the user navigates to another application functionality.
+> For devs: Whenever a new _Activity_ is added to the _Foreground_ of the _Back Stack_, the previous _Activity_ is destroyed only on some special occasions, e.g. if the OS needs more resources and when it is not destroyed, even if it is not in _foreground_ (being used by the user). With _Retained Fragments_ it's possible to capture the data after a response from an _AsyncTask_ in a _Listener_ and, when the user returns to that _Activity_ the data will already be loaded. _Cool huh?_
 
-&nbsp;
 
-Outro padrão que vale o estudo é o [Retained Fragments](http://www.androiddesignpatterns.com/2013/04/retaining-objects-across-config-changes.html){:target="_blank"}, pois além de ajudar a evitar as _ANRs_, a  melhorar a UX, quanto ao quesito tempo de resposta, faz com que os dados assíncronos continuem sendo "carregados" mesmo que o usuário navegue para outra funcionalidade do aplicativo. 
-> Para os devs: Quando é adicionada uma nova _Activity_ ao _Foreground_ da _Back Stack_, a _Activity_ anterior da pilha de activities dessa _Back Stack_ só é destruída em algumas ocasiões especiais (caso o sistema operacional precise de mais recursos, por exemplo), e quando ela não é destruída, mesmo que não esteja em _foreground_ (sendo utilizada pelo usuário) com _Retained Fragments_ é possível capturar os dados após uma resposta de uma _AsyncTask_ em um _Listener_ e, quando o usuário retornar para essa _Activity_ os dados já estarão carregados. _Legal né?_
+We cannot forget the good old _ViewHolder_ standard that **must** be used when it is necessary to display a list of items so that there is **better memory reuse**. Without using this pattern, each item in the list allocates a _X_ memory space to "assemble" its view and if the list the user is browsing has 200 items, by example, the total space allocated will be _X_ * 200! With this pattern, only the items that are initially displayed on the user's device screen allocate a memory space to create the visualization, that is, for a device where five items are displayed on the screen, even if it has 200 items, the total space allocated will be _X_ * 5!
+> Facebook, WhatsApp, and Snapchat can use as many memory they want on the user's cell phone, but your not-so-glamorous app cannot... If the user sees your app among the most memory-consuming (which is pretty easy to verify) you may lost this user forever.
 
-&nbsp;
 
-Não podemos nos esquecer do bom e velho padrão _ViewHolder_ que **deve** ser utlizado quando é necessário exibir uma lista de itens para que haja **melhor reaproveitamento de memória**. Sem utilizar esse padrão, cada item da lista aloca um espaço de memória _X_ para "montar" sua  visualização e se a lista que o usuário está navegando têm 200 itens por exemplo, o espaço total alocado será de _X_ * 200! Com esse padrão, apenas os itens que são exibidos inicialmente na tela do disposito do usuário alocam um espaço de memória para criação da visualização, ou seja, para um dispositivo onde são exibidos cinco items na tela, mesmo que tenha 200 itens, o espaço total alocado será de _X_ * 5!
-> O Facebook, o WhatsApp e o SnapChat podem usar memória à vontade do celular do usário, mas o seu app não tão glamoroso não pode...Se ele ver o seu app entre os que mais consomem memória (o que é bem fácil de verificar) você pode ter menos um usuário para o seu app.
+## And what else?
 
-&nbsp;
+There are some cool things that have not yet been done in this app (_a day who knows ..._) but I believe that I'm working with essential items/strategies to have a professional application, which makes it possible to maintain the source code without headaches and achieve good retention rates and user engagement.
+
+### Strategically speaking...
+
+Before "getting your hands dirty", how about prototyping? Choosing a good tool for creating _Wireframes_ and _Mockups_ will help you create proofs of concept for your app before starting its implementation, and with that you can do **A/B Tests** with some [mapped user segments](http://startupsorocaba.com/tag/value-proposition-canvas/), for example, collecting feedbacks and making improvements to the UX of your app before starting the expensive ($$$) development process.
+
+Drawing up plans for user engagement, understanding a little about **bounce rates** and **conversion** are fundamental to your app's marketing - _you don't want to develop an app with a monstrous performance, that has no errors, but that is only installed by friends and family_. Take a look at [the main Digital Marketing metrics for your application](http://resultadosdigitais.com.br/blog/metricas-de-marketing-digital-for-mobile-apps /)
+
+
+### Technically speaking...
+
+Working with some **MVP standard** on Android is essential for good maintainability of the app, the articles [MVP on Android - Tin Megali](http://www.tinmegali.com/en/model-view-presenter-mvp-no-android-introducao/) and [MVP Android - Vinícius Thiengo](http://www.thiengo.com.br/mvp-android) are excellent references about this topic.
+
+There are many libraries that assist in Android development, in this app some were not used that are worth the study:
+- [Retrofit](http://square.github.io/retrofit/) - It is extremely simple, fast, and efficient to perform HTTP requests from your app and has excellent documentation, widely used for communication with REST APIs.
+- [Dagger 2](https://github.com/google/dagger) - Library that allows Dependency Injection on Android. To learn more about Dagger 2 and the concepts of Dependency Inversion and Dependency Injection, I recommend a read in this [Introduction to Dagger 2](https://medium.com/android-dev-br/introdu%C3%A7%C3%A3o-ao-dagger-2-56d193118a6c) article.
+- [Butter Knife](http://jakewharton.github.io/butterknife/) - Focused on productivity, this library makes use of *Annotations* to inject *Views* into Android components, which makes it possible to write code in a way much more succinct in various scenarios, avoiding several *Boiler Plate* codes, such as `activity.subtitle = (android.widget.TextView) activity.findViewById(R.id.subtitle);` for example.
+
+<img align="left" src=./Kotlin-logo.png> The Android team, at the Google I/O 2017 keynote announced [official support for Kotlin](https://blog.jetbrains.com/kotlin/2017/05/kotlin-on-android-now-official/), which is a huge motivation for anyone interested in this new, modern, and powerful development language. Kotlin has many advantages over Java's verbose syntax and avoids several errors that happen at *runtime* in Java (like the famous *NullPointerExceptions*). Kotlin is *Null Safety* (less bugs in your app), **extremely productive* *and has a very short learning curve, in addition to having excellent (and interactive) documentation on the [official website](http://kotlinlang.org/docs/reference/).
